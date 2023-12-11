@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sreelathadeebaguntlaazurecloud 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sreelathadeebaguntlaazurecloud
+  template:
+    metadata:
+      labels:
+        app: sreelathadeebaguntlaazurecloud 
+    spec:
+      containers:
+        - name: sreelathadeebaguntlaazurecloud 
+          image: ccazurepetstorecr.azurecr.io/sreelathadeebaguntlaazurecloud
+          ports:
+          - containerPort: 80
